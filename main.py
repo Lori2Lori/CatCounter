@@ -1,4 +1,10 @@
-cats = 3
+cats = 0
+while not cats:
+    try:
+        cats = int(raw_input("Please enter number of cats in herd: "))
+    except ValueError:
+        print "Hey, I've told you to enter number of cats!"
+
 relations = []
 for cat in range(1,cats + 1):
     # print cat
@@ -11,4 +17,4 @@ for cat in range(1,cats + 1):
             if not relation in relations:
                 # print "cat %s likes cat %s" % (cat , cat2)
                 relations.append(relation)
-print len(relations)
+print "There are %s relations between your cats" % (len(relations))
